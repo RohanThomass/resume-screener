@@ -25,7 +25,11 @@ app.config['MAIL_DEFAULT_SENDER'] = 'your_email@gmail.com'
 mail = Mail(app)
 
 # PDF generator config
-config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+if os.name == 'nt':  # Windows
+    config = pdfkit.configuration(wkhtmltopdf=r'C:\Program Files\wkhtmltopdf\bin\wkhtmltopdf.exe')
+else:  # Linux (Render, production)
+    config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
+
 
 # Init
 db.init_app(app)
