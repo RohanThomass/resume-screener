@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body { font-family: Arial, sans-serif; padding: 40px; }
+        h2 { color: #007BFF; }
+        .score { font-size: 24px; margin-top: 20px; }
+        .section { margin-top: 30px; }
+        ul { line-height: 1.6; }
+    </style>
+</head>
+<body>
+    <h2>AI Resume Screening Report</h2>
+    <p class="score">Match Score: <strong>{{ match_score }}%</strong></p>
+
+    <div class="section">
+        <h3>✅ Matched Skills</h3>
+        <ul>
+        {% for skill in matched_skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>❌ Missing Skills</h3>
+        <ul>
+        {% for skill in missing_skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+
+    <div class="section">
+        <h3>💡 Suggestions</h3>
+        <ul>
+        {% for item in suggestions %}
+            <li>{{ item }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

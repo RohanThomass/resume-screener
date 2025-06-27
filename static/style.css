@@ -1,0 +1,36 @@
+/* static/style.css */
+
+body {
+     background: #f4f6f8;
+    font-family: 'Segoe UI', sans-serif;
+    padding: 20px;
+}
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+    margin: auto;
+    box-shadow: 0 0 10px #ccc;
+}
+button {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+}
+.result {
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: green;
+}
+
+.card {
+    border-radius: 16px;
+    background: #fff;
+}
+
+h2, h5 {
+    font-weight: 600;
+}
